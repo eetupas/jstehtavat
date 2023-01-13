@@ -1,23 +1,28 @@
-const coursesEn = ["Hamburger, cream sauce and poiled potates",
-                "Goan style fish curry and whole grain rice",
-                "Vegan Chili sin carne and whole grain rice",
-                "Broccoli puree soup, side salad with two napas",
-                "Lunch baguette with BBQ-turkey filling",
-                "Cheese / Chicken / Vege / Halloum burger and french fries"];
-const coursesFi = ["Jauhelihapihvi, ruskeaa kermakastiketta ja keitettyä perunaa",
-                "Goalaista kalacurrya ja täysjyväriisiä",
-                "vegaani Chili sin carne ja täysjyväriisi",
-                "Parsakeittoa,lisäkesalaatti kahdella napaksella",
-                "Lunch baguette with BBQ-turkey filling",
-                "Juusto / Kana / Kasvis / Halloumi burgeri ja ranskalaiset"];
+'use strict';
+import Menu from './assets/menu.json';
+
+
+// Test
+const coursesEn = [];
+const coursesFi = [];
+const menu = Menu.courses;
+
 const sortButton = document.querySelector('#sort-button');
 const reverseButton = document.querySelector('#reverse-button');
 const langFi = document.querySelector('#language-fi');
 const langEn = document.querySelector('#language-en');
 const random = document.querySelector('#random');
 let lang = 'fi';
-let activeMenu = coursesFi;
+//let activeMenu = coursesFi;
+for (let x in menu){
+    coursesFi[x-1] = (menu[x].title_fi);
+    coursesEn[x-1] = (menu[x].title_en);
+}
+console.log(coursesEn);
+console.log(menu.length);
+console.log(menu[1].title_fi);
 let activeSorting = 'asc';
+let activeMenu = coursesEn;
 /**
  * Renders menu content to html page
  * @param {*} menu = array of dishes 
