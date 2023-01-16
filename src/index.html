@@ -2,12 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,700;1,400&family=Roboto+Slab:wght@400;800&display=swap" rel="stylesheet">
   <title>Grid touhua</title>
+
   <style>
     * {
-        font-family: sans-serif;
+        font-family: 'Lato', sans-serif;
     }
     header {
+        font-family: robotoSlabBold;
         display: flex;
         flex-direction: row;
         height: 70px;
@@ -30,6 +35,7 @@
         margin-right:5px;
         color:rgb(126, 0, 0);
     }
+
     .search {
         margin-top: auto;
         margin-bottom: auto;
@@ -69,7 +75,7 @@
     .bannertext1 {
         text-align:center;
         color:white;
-        font-family: serif;
+        font-family: 'Roboto Slab', serif;
         font-weight: bold;
         font-size: 60px;
         letter-spacing: .4rem;
@@ -190,6 +196,11 @@
         background-color: pink;
         text-align: left;
     }
+    .location {
+        color:rgb(89, 255, 89);
+        flex-direction: row-reverse;
+
+    }
 
   </style>
 </head>
@@ -204,7 +215,7 @@
                 <li>Yhteystiedot</li>
             </ul>
         </nav>
-        <div class = "search"><input type = "text" placeholder="hae" required></div>
+        <div class = "search"><input type = "text" placeholder="hae" required><img class = "searchicon" src="icons/search.svg" alt="Search" height = "30" width = "30"></div>
     </header>
         <div class = "banner">
             <div class = "lounaritext">
@@ -217,8 +228,8 @@
             <p class = "mainosteksti">Missä tänään syötäisiin? Tuttu tarina ennen lounashetkeä. Palvelu etsii lähelläsi olevat lounaspaikas, sekä näyttää niiden päivittäisen lounaslistan. Viikottaiset lounaslistat ovat myös käytettävissäsi. Pääset niihin klikkaamalla ravintolan logoa</p>
         </div>
         <div class="container">
-            <div class="item item1">Ravintola 1</div>
-        <div class="item item2">Ravintola 2</div>
+            <div class="item item1">Ravintola 1<img class = "location" src="icons/location.svg" alt="Search" height = "30" width = "30"></div>
+        <div class="item item2">Ravintola 2<img class = "location" src="icons/location.svg" alt="Search" height = "30" width = "30"></div>
     </div>
 </body>
 </html>
