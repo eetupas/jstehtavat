@@ -1,5 +1,6 @@
 'use strict';
 import * as sodexoData from './modules/SodexoData.js';
+import * as fazerData from './modules/FazerData.js';
 import * as functions from './modules/Functions.js';
 
 const sdata = sodexoData;
@@ -10,7 +11,9 @@ const reverseButton = document.querySelector('#reverse-button');
 const langFi = document.querySelector('#language-fi');
 const langEn = document.querySelector('#language-en');
 const random = document.querySelector('#random');
-render.renderMenu(sdata.activeMenu);
+render.renderMenu(sdata.activeMenu, 1);
+render.renderMenu(sdata.menuFi, 2);
+
 /**
  * Renders menu content to html page
  * @param {*} menu = array of dishes 

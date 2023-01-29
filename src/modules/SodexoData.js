@@ -4,13 +4,12 @@ import Menu from '../assets/menu.json';
 import * as functions from './Functions.js';
 import * as fazerData from './FazerData';
 
+const ruokalista = fazerData.menuEn;
+console.log(ruokalista);
 const render = functions;
-
 const courseMenu = Menu.courses;
 const menuFi = fazerData.menuFin;
 const menuEn = fazerData.menuEn;
-
-
 const coursesEn = [];
 const coursesFi = [];
 const menu = Menu.courses;
@@ -27,6 +26,7 @@ let lang = 'fi';
 let activeMenu = coursesEn;
 
 const sortMenu = (menu, order='asc') => {
+    console.log(ruokalista);
     menu.sort();
     if (order === 'desc') {
         menu.reverse();
