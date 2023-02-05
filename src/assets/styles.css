@@ -12,8 +12,9 @@ nav {
   margin-bottom: auto;
   width: 40%
 }
-ul {
+.ylanav {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   list-style-type: none;
   font-size: large;
@@ -41,8 +42,6 @@ input {
 input {
   height: 30%;
 }
-
-
 
 .banner {      
   overflow: hidden;
@@ -80,9 +79,9 @@ input {
   overflow: hidden;
   
 }
-
-
 body {
+padding-left:15%;
+padding-right:15%;
 background-image: white;
 min-height: 100vh;
 background-attachment: fixed;
@@ -103,8 +102,6 @@ background-attachment: fixed;
   margin-top: auto;
   margin-bottom: auto;
 }
-
-
 
 
 
@@ -165,6 +162,7 @@ padding: 30px;
 background-color: rgb(206, 206, 206);
 text-align: right top;
 height: 200px;
+overflow:scroll;
 /* width: 40px;
 height: 40px; */
 }

@@ -11,14 +11,11 @@ const reverseButton = document.querySelector('#reverse-button');
 const langFi = document.querySelector('#language-fi');
 const langEn = document.querySelector('#language-en');
 const random = document.querySelector('#random');
-render.renderMenu(sdata.activeMenu, 1);
-render.renderMenu(sdata.menuFi, 2);
-
+render.renderMenu(sdata.activeMenu);
 /**
  * Renders menu content to html page
  * @param {*} menu = array of dishes 
  */
-
 sortButton.addEventListener('click', () => {
     activeSorting = 'asc';
     render.renderMenu(sdata.sortMenu(sdata.activeMenu));
@@ -41,12 +38,3 @@ random.addEventListener('click', () => {
     alert(sdata.getRandomDish(sdata.activeMenu));
 });
 
-if ('serviceWorker' in navigator) {
- window.addEventListener('load', () => {
-   navigator.serviceWorker.register('/service-worker.js').then(registration => {
-     console.log('SW registered: ', registration);
-   }).catch(registrationError => {
-     console.log('SW registration failed: ', registrationError);
-   });
- });
-}
